@@ -1,0 +1,103 @@
+
+
+  /******************** SECCIÓN 2  ********************/
+
+  
+  
+  #titParteA {
+   font-family: 'Josefin Sans', sans-serif;
+font-style: normal;
+font-weight: 700;
+    color:#FDFAF2;
+    font-size: 40px;
+    
+  }
+
+  #subtParteA {
+    font-family: 'Josefin Sans', sans-serif; 
+    color:#FDFAF2;
+    font-size: 1.2vw;
+    line-height: 35px;  
+    font-weight: 700;
+  } 
+
+  #li1 {
+    background-color: #B6BBC3;
+    font-family: 'Josefin Sans', sans-serif; 
+    color: #FDFAF2;
+    opacity: 0.9;
+  }
+
+  #li2 {
+    background-color: #B6BBC3;
+    font-family: 'Josefin Sans', sans-serif; 
+    color: #FDFAF2;
+    opacity: 0.9;
+  }
+
+  #li3 {
+    background-color: #B6BBC3;
+    font-family: 'Josefin Sans', sans-serif; 
+    color: #FDFAF2;
+    opacity: 0.9;
+  }
+
+  #li4 {
+    background-color: #B6BBC3;
+    font-family: 'Josefin Sans', sans-serif; 
+    color: #FDFAF2;
+    opacity: 0.9;
+  }
+
+#fotosindex {
+  width:100%;
+  height:100%;
+}
+
+
+
+
+
+
+
+
+/******** Video ********/
+    
+.video{
+width:3px;
+}
+
+
+
+
+/******************** MEDIA QUERIES ********************/
+
+/******** Smaller smartphones ********/
+
+@media (max-width: 480px) {
+  #titParteA{font-size: 22px} 
+  #subtParteA{font-size: 18px}
+  }
+
+/******** Tablets and larger smartphones ********/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #titParteA{font-size: 22px} 
+  #subtParteA{font-size: 18px}
+}
+
+/******** Laptops, larger tablets in landscape and small desktops ********/
+
+@media (min-width: 769px) and (max-width: 1279px) {
+  #titParteA{
+    font-size: 22px;
+  } 
+  #subtParteA{
+    font-size: 18px;
+  }
+}
+
+/******** Larger desktops and monitors ********/
+
+@media (min-width: 1280px) {}
+

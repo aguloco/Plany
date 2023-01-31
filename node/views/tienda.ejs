@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <link rel="stylesheet" href="/css/tienda.css">
+    <%- include('partials/head', {title: 'Tienda'}) %>    
+</head>
+   
+<body>
+
+    <%- include('./partials/header') %>
+
+
+        <div class="container">
+
+            <div class="row py-4">
+                <div class="col-md-5 mx-auto">
+                    <div class="input-group">
+                        <input class="form-control border-end-0 border rounded-pill" type="search" value="" id="example-search-input">
+                        <span class="input-group-append">
+                            <button class="btn btn-outline-secondary bg-blue border-bottom-0 border solid rounded-pill ms-n5" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+            <% for(let producto of productos) { %>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div class="product-box">
+            
+                        <div class="product-inner-box position-relative" id="carrito">
+                            
+                            <div class="icons position-absolute">
+                                <a href="/tienda/detalle/<%=producto.id %>" class="text-decoration-none text-dark"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                            <div class="discount">
+                                <span class="badge rounded-0 text-white"><i class="fa-solid fa-arrow-down-long"></i>
+                                <%=producto.descuento %>%
+                                </span>
+                            </div>
+                            <a href="/tienda/detalle/<%=producto.id %>">
+                                <img src="/img/tiendaProductos/<%=producto.imagen %>" class="img-fluid" alt="imagen de producto">
+                            </a>
+                            <div class="cart-btn">
+                                <button class="add-cart btn btn-light shadow-sm rounded-pill" id="addToCart"><i class="fa-solid fa-cart-shopping"></i> Añadir al carrito</button>
+                            </div>
+                        
+                            <div class="product-info" id="productito">
+                                <div>
+                                    <p class="product-name h4"><%=producto.nombre %></p>
+                                </div>
+                                <div>
+                                    <p class="product-price h4">$ <%=producto.precio %></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <% } %> 
+            </div>
+        </div>
+
+        <%- include('./partials/footer') %>
+        
+</body>
+    
+</html>

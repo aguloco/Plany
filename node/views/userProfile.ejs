@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+    <%- include('partials/head', {title: 'Perfil de usuario'}) %>
+    <link rel="stylesheet" href="/css/profile.css">
+        
+</head>
+   
+    <body>
+        <div class="container-fluid bg-profile">
+        <%- include('./partials/header') %>
+        </div>
+        
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-3 profile">
+                    <p class="h2" id="nombre_perfil">¡Hola <%= user.nombre  %>!</p>
+                    
+                    <img src="/img/avatars/<%= user.imagen %>" width="300px" height="300px">
+                    <br>
+                    <br>
+                    <div class="alert alert-success"><%= user.email  %></div>
+                    <% if (user.rol == "ADMIN") { %>
+                    <div class="pb-5">
+                        <a class="btn btn-outline-secondary" href="/tienda/crear"> Crear nuevo producto </a> 
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div>
+   
+      </div>
+
+      <%- include('./partials/footer') %>
+        
+</body>
+</html>

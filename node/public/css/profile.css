@@ -1,0 +1,28 @@
+
+.bg-profile    {
+    background-image: url('/img/perro-y-mujer.png');
+    background-size: cover;
+    position: relative;
+    height: 36vh;
+    
+}
+
+
+.profile    {
+    font-size:20px;
+    margin: 0 auto;
+
+}
+
+#nombre_perfil{
+    color:#72848C
+}
+
+
+@media (max-width: 600px) 
+{
+ .crearProducto {
+     margin:0 auto;
+  }
+}
+
