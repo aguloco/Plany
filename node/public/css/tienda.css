@@ -6,11 +6,11 @@ body {
 /* -------------------- Side Bar -------------------- */ 
 
 #sidebar {
-  background:#fff;
+  background:grey;
 	width:275px;	
 	padding:13px 0 0 45px;
 	height:1400px;
-	border-right:1px solid #eee;
+	border-right:1px solid grey;
 }
 
 #sidebar .h4 {
