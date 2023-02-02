@@ -1,6 +1,9 @@
-
+body {
+    background-image: url('/img/pexels-scott-webb-305821.jpg');
+  }
+  
 .bg-login-register {
-    background-image: url('/img/patitas-perro.png');
+    background-image: url('/img/pexels-scott-webb-305821.jpg');
     background-size: cover;
     position: relative;
     height: 100vh;

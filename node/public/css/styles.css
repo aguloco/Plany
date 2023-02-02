@@ -1,6 +1,10 @@
-
-
-  /******************** SECCIÓN 2  ********************/
+  body {
+  background-image: url('/img/pexels-gursharndeep-singh-2898057.jpg');
+}
+  
+  
+  
+  /******************** SECCIÓN 1  ********************/
 
   
   
@@ -8,8 +12,8 @@
    font-family: 'Josefin Sans', sans-serif;
 font-style: normal;
 font-weight: 1000;
-    color:rgb(8, 132, 109);
-    font-size: 40px;
+    color:rgb(230, 255, 250);
+    font-size: 45px;
     
   }
 
@@ -62,10 +66,7 @@ font-weight: 1000;
 
 
 /******** Video ********/
-    
-.video{
-width:3px;
-}
+
 
 
 
