@@ -8,7 +8,7 @@ function ProductsList() {
     const [products, setProduct] = useState([]);
 
     useEffect(() => {
-        fetch(/*'https://onrender.com/api/productos'*/)
+        fetch('https://https://planymacetas.onrender.com/api/productos')
         .then((response) => response.json())
         .then((data) => { 
             const productsMapped = data.products.map((item) => {  
@@ -16,7 +16,7 @@ function ProductsList() {
                 nombre: item.nombre,
                 precio: item.precio,
                 categoria: item.Categoria.nombre,
-                imagen: /*"onrender.com/img/tiendaProductos/"*/ + item.imagen
+                imagen: "https://planymacetas.onrender.com/img/tiendaProductos/" + item.imagen
                 }
              })
             setProduct(productsMapped); 

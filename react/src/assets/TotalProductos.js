@@ -8,7 +8,7 @@ function TotalProductos() {
     const [products, setProducts] = useState();
 
     useEffect(() => {
-        fetch(/*'onrender.com/api/productos'*/)
+        fetch('https://planymacetas.onrender.com/api/productos')
         .then((response) => response.json())
         .then((data) => { 
             setProducts(data.count) 

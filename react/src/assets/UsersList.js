@@ -8,7 +8,7 @@ function UsersList() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        fetch(//'onrender.com/api/usuarios'//
+        fetch('https://planymacetas.onrender.com/api/usuarios'
         )
         .then((response) => response.json())
         .then((data) => { 
@@ -17,7 +17,7 @@ function UsersList() {
                 nombre: item.nombre,
                 apellido: item.apellido,
                 email: item.email,
-                imagen: /*"onrender.com/img/avatars/"*/ + item.imagen
+                imagen: "https://planymacetas.onrender.com/img/avatars/" + item.imagen
                 }
              })
             setUsers(usersMapped); 

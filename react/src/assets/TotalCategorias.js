@@ -18,7 +18,7 @@ function TotalCategorias() {
     }]);
 
     useEffect(() => {
-        fetch(/*'https://onrender.com/api/productos'*/)
+        fetch('https://planymacetas.onrender.com/api/productos')
         .then((response) => response.json())
         .then((data) => {   
             setCategory([{

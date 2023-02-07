@@ -8,7 +8,7 @@ function TotalUsuarios() {
     const [users, setUsers] = useState();
 
     useEffect(() => {
-        fetch(/*'onrender.com/api/usuarios'*/)
+        fetch('https://planymacetas.onrender.com/api/usuarios')
         .then((response) => response.json())
         .then((data) => { 
             setUsers(data.count) 
