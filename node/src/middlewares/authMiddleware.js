@@ -1,5 +1,5 @@
 /* Middleware de ruta
-    Función MW: se va a encargar de ver que el usuario esté logueado para seguir avanzando. */
+    Función: se va a encargar de ver que el usuario esté logueado para seguir avanzando. */
 
 function authMiddleware (req, res, next) {
     if(!req.session.userLogged) {

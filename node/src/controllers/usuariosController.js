@@ -14,6 +14,8 @@ const controller = {
     procesoRegistro: (req, res) => {
         const resultValidation = validationResult(req);
         
+        
+
         // Si hay errores de validación en el proceso de registro...
         if (resultValidation.errors.length > 0) {
             return res.render('registro', {

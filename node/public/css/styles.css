@@ -2,10 +2,24 @@
   background-image: url('/img/pexels-gursharndeep-singh-2898057.jpg');
 }
   
+
+  /******************** CARRUSEL  ********************/
+  .carousel { 
+    
+    width:130vh;
+  height:80vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   
+  
+  }
+
+
+
   
   /******************** SECCIÓN 1  ********************/
-
+  
   
   
   #titParteA {
