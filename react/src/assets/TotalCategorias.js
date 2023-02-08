@@ -7,13 +7,13 @@ import { FireIcon, GiftTopIcon, EyeDropperIcon} from '@heroicons/react/24/solid'
 function TotalCategorias() {
 
     const [category, setCategory] = useState([{
-        subTitle1: "Comida natural",
+        subTitle1: "Plantas",
         comida_natural: 0,
 
-        subTitle2: "Categoria: snacks",
+        subTitle2: "Categoria: macetas",
         category_snacks: 0,
 
-        subTitle3: "Categoria: suplementos",
+        subTitle3: "Categoria: artesanias",
         category_suplementos: 0,
     }]);
 
@@ -22,13 +22,13 @@ function TotalCategorias() {
         .then((response) => response.json())
         .then((data) => {   
             setCategory([{
-                subTitle1: "Comida natural",
+                subTitle1: "Plantas",
                 comida_natural: data.countByCategory.category_comida_natural,
 
-                subTitle2: "Categoria: snacks",
+                subTitle2: "Categoria: macetas",
                 category_snacks: data.countByCategory.category_snacks,
 
-                subTitle3: "Categoria: suplementos",
+                subTitle3: "Categoria: artesanias",
                 category_suplementos: data.countByCategory.category_suplementos,
             }])
         })
