@@ -1,6 +1,6 @@
 
 .bg-profile    {
-    background-image: url('/img/perro-y-mujer.png');
+    
     background-size: cover;
     position: relative;
     height: 36vh;
@@ -15,7 +15,9 @@
 }
 
 #nombre_perfil{
-    color:#72848C
+    color:#72848C;
+    font-size:40px;
+    margin: 0 auto;
 }
 
 

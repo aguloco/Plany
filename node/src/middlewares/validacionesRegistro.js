@@ -33,8 +33,10 @@ let validacionesRegistro = [
             let fileExtension = path.extname(file.originalname);
             if (!acceptedExtensions.includes(fileExtension)){
                 throw new Error (`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-            };
-        }
+            }
+           else if (file.size>1000000) { //cuando la imagen supera 1MB
+                throw new Error ('Carga una imágen');
+        }}
         return true;
         })
 ];

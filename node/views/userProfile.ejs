@@ -17,7 +17,7 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-md-3 profile">
-                    <p class="h2" id="nombre_perfil"><%= user.nombre  %> <%= user.apellido %></p>
+                    <p class="h2" id="nombre_perfil"><%= user.nombre  %> <%= user.apellido %></p><br>
                     
                     <img src="/img/avatars/<%= user.imagen %>" width="300px" height="300px">
                     <br>
@@ -25,7 +25,7 @@
                     <div class="alert alert-success"><%= user.email  %></div>
                     <% if (user.rol == "ADMIN") { %>
                     <div class="pb-5">
-                        <a class="btn btn-outline-secondary" href="/tienda/crear"> Crear nuevo producto </a> 
+                        <a class="btn btn-outline-success" href="localhost:3000"> Dashboard Administrador </a> 
                     </div>
                     <% } %>
                 </div>
@@ -35,7 +35,16 @@
    
       </div>
 
-     
+      <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3 text-white" style="background-color: rgb(8, 132, 109);">
+          © 2023 Copyright:
+          <a class="text-white" href="https://Plany.com/">Plany.com</a>
+        </div>
+        <!-- Copyright -->
+    
+    
+      </footer>    
         
 </body>
 </html>

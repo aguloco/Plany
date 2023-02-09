@@ -35,15 +35,11 @@ window.addEventListener("load",function(){
         let avatar = document.getElementById("avatar").value;
         if (avatar==""){
             return alert("Las extensiones de archivo permitidas son: .jpg, .jpeg, .png y .gif");
+        } else if (avatar.size>1000000){
+            return alert('La imagen no puede superar el tamaño de 1MB')
         }
 
-    formularioRegistro.submit(Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Estás registrado.',
-        showConfirmButton: false,
-        timer: 1500
-      }));
+    formularioRegistro.submit();
         
     })    
 })

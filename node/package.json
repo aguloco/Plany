@@ -1,5 +1,5 @@
 {
-  "name": "grupo_2",
+  "name": "plany",
   "version": "1.0.0",
   "description": "proyecto",
   "main": "app.js",
@@ -38,5 +38,9 @@
     "pg": "^8.9.0",
     "sequelize": "^6.28.0",
     "sequelize-cli": "^6.6.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   }
 }

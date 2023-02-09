@@ -23,13 +23,7 @@ window.addEventListener("load",function(){
 
          
 
-    formularioLogin.submit(Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Login exitoso',
-        showConfirmButton: false,
-        timer: 3000
-      }));
+    formularioLogin.submit();
     
     // formularioLogin.addEventListener("submit", function(evento){
 

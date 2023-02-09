@@ -10,10 +10,14 @@ const storage = multer.diskStorage({
         cb(null, path.join(__dirname,"../../public/img/avatars"));   
     },
 
+
+
+    
     filename: function(req, file, cb) {          
         let imageName = Date.now() + path.extname(file.originalname);  
         cb(null, imageName);         
-    }
+    },
+    
 });
 
 const uploadAvatar = multer ({storage: storage ,  limits: { fileSize: 1000000}});
