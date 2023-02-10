@@ -13,8 +13,8 @@ const controller = {
         res.render('', { user: req.session.userLogged})
     },
 
-    galeria: (req, res) => {
-        res.render('', { user: req.session.userLogged})
+    nuevacontra: (req, res) => {
+        res.render('nuevacontra', { user: req.session.userLogged})
     }
 }
 

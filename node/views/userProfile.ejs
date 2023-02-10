@@ -23,11 +23,29 @@
                     <br>
                     <br>
                     <div class="alert alert-success"><%= user.email  %></div>
+
+
+                    <!-- Botones admin -->
                     <% if (user.rol == "ADMIN") { %>
-                    <div class="pb-5">
-                        <a class="btn btn-outline-success" href="localhost:3000"> Dashboard Administrador </a> 
+                        <br><div class="pb-5">
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a class="btn btn-outline-success" href="localhost:3000">Dashboard Administrador   <i style='font-size:24px' class='far'>&#xf2bb;</i> </a><br><br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp<a class="btn btn-outline-success" href="localhost:3001">Manipular datos de clientes <i style='font-size:24px' class='far'>&#xf2bb;</i> </a> 
+                          
+                          
+                          
+                         
+    
+                        </div>
+                        <% } %>
+
+
+                    <!-- ELIMINAR USUARIO -->
+                    &nbsp&nbsp&nbsp<div class="pb-5">
+                    <br><form action="/usuario/eliminar/<%= user.id %>?_method=DELETE" method="POST">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <button type="submit" class="btn btn-outline-danger"> Borrar cuenta <i class="bi bi-trash"></i>  </button></form> 
                     </div>
-                    <% } %>
+
+                    
                 </div>
             </div>
         </div>

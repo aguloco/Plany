@@ -47,7 +47,7 @@
                                 </div>
                                 <!-- Activar el modal -->
                                 <!-- <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="fa-solid fa-cart-shopping"></i> Carrito de compras</button>-->
-                                <a class="dropdown-item" href="/usuario/perfil"><i class="fa-solid fa-user"></i> Mi cuenta</a>
+                                <a class="dropdown-item" href="/usuario/perfil/<%=user.id %>"><i class="fa-solid fa-user"></i> Mi cuenta</a>
                                 <a class="dropdown-item" href="/usuario/salir"><i class="fa-solid fa-right-from-bracket"></i> Salir </a>
                             </ul>
                             
@@ -62,7 +62,7 @@
                     <% } else { %>
                         <li class="nav-item">
                             <a href="/usuario/registro" class="nav-link text-white text-decoration-none" 
-                            role="button">Regístrate</a>
+                            role="button">Registrate</a>
                         </li>
                         <li class="nav-item">
                             <a href="/usuario/ingreso" class="nav-link text-white text-decoration-none" 

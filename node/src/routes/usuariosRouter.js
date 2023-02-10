@@ -13,6 +13,10 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 // ********** RUTAS **********/
+
+/* Perfil */ 
+ router.get('/', usuariosController.profile); 
+
 /* Registro */ 
 router.get('/registro', guestMiddleware, usuariosController.registro); 
 router.post('/registro', uploadAvatar.single('avatar'), validacionesRegistro, usuariosController.procesoRegistro);
@@ -21,9 +25,12 @@ router.post('/registro', uploadAvatar.single('avatar'), validacionesRegistro, us
 router.get('/ingreso', guestMiddleware, usuariosController.login);
 router.post('/ingreso', validacionesLogin, usuariosController.procesoLogin);
 
-router.get('/perfil', authMiddleware, usuariosController.profile);
+router.get('/perfil/:id', authMiddleware, usuariosController.profile);
 
 router.get('/salir', usuariosController.logout);
+
+/*** Para eliminar usuario ***/ 
+ router.delete('/eliminar/:id', authMiddleware, usuariosController.destroy); 
 
 
 // ********** Exportación de las rutas. No tocar **********

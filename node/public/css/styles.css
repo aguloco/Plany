@@ -14,7 +14,7 @@
   
   
   }
-
+  
 
 
   
@@ -82,8 +82,10 @@ font-weight: 1000;
 /******** Video ********/
 
 
+@media (max-width: 576px){
+ #carousel{max-width: 90%};
 
-
+}
 
 /******************** MEDIA QUERIES ********************/
 

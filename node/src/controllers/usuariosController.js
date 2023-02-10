@@ -80,7 +80,7 @@ const controller = {
                     if(req.body.recordame) {
                         res.cookie('emailUsuario', req.body.emailUsuario, { maxAge: (1000 * 60) * 60 })
                     }
-                    return res.redirect('/usuario/perfil');
+                    return res.redirect('/usuario/perfil/:id');
                 } else {
                     // Si es un usuario que quiere ingresar, pero está poniendo mal su contraseña... 
                     return res.render('login', {
@@ -110,6 +110,20 @@ const controller = {
         req.session.destroy();
         res.redirect('/');
     },
+
+    destroy : (req, res) => {
+
+        db.Usuario.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then((resultado) => {req.session.destroy()})
+        .then((resultado) => {res.redirect('/')})
+        .catch(err => {res.send(err)})
+        },
+
+
 }; 
 
 
