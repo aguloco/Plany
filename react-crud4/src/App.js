@@ -59,8 +59,8 @@ function App() {
   var columns = [
     {title: "id", field: "id", hidden: true},
     {title: "Avatar", render: rowData => <Avatar maxInitials={1} size={40} round={true} name={rowData === undefined ? " " : rowData.first_name} />  },
-    {title: "First name", field: "first_name"},
-    {title: "Last name", field: "last_name"},
+    {title: "Nombre", field: "first_name"},
+    {title: "Apellido", field: "last_name"},
     {title: "email", field: "email"}
   ]
   const [data, setData] = useState([]); //table data
@@ -83,13 +83,13 @@ function App() {
     //validation
     let errorList = []
     if(newData.first_name === ""){
-      errorList.push("Please enter first name")
+      errorList.push("Introduzca su nombre")
     }
     if(newData.last_name === ""){
-      errorList.push("Please enter last name")
+      errorList.push("Introduzca su apellido")
     }
     if(newData.email === "" || validateEmail(newData.email) === false){
-      errorList.push("Please enter a valid email")
+      errorList.push("Introduzca un email válido")
     }
 
     if(errorList.length < 1){
@@ -104,7 +104,7 @@ function App() {
         setErrorMessages([])
       })
       .catch(error => {
-        setErrorMessages(["Update failed! Server error"])
+        setErrorMessages(["Server error"])
         setIserror(true)
         resolve()
         
@@ -122,13 +122,13 @@ function App() {
     //validation
     let errorList = []
     if(newData.first_name === undefined){
-      errorList.push("Please enter first name")
+      errorList.push("Introduzca su nombre")
     }
     if(newData.last_name === undefined){
-      errorList.push("Please enter last name")
+      errorList.push("Introduzca su apellido")
     }
     if(newData.email === undefined || validateEmail(newData.email) === false){
-      errorList.push("Please enter a valid email")
+      errorList.push("Introduzca un email válido")
     }
 
     if(errorList.length < 1){ //no error
@@ -142,7 +142,7 @@ function App() {
         setIserror(false)
       })
       .catch(error => {
-        setErrorMessages(["Cannot add data. Server error!"])
+        setErrorMessages(["No se pudo añadir la información"])
         setIserror(true)
         resolve()
       })
@@ -166,7 +166,7 @@ function App() {
         resolve()
       })
       .catch(error => {
-        setErrorMessages(["Delete failed! Server error"])
+        setErrorMessages(["No se pudo borrar la información"])
         setIserror(true)
         resolve()
       })
@@ -189,7 +189,7 @@ function App() {
             }       
           </div>
             <MaterialTable
-              title="User data from remote source"
+              title="Clientes Plany"
               columns={columns}
               data={data}
               icons={tableIcons}
